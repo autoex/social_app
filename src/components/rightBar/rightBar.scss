@@ -1,0 +1,80 @@
+@import '../../style.scss';
+
+
+.rightBar {
+  @include themify($themes) {
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    background-color: themed('bgSoft');
+    
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      padding: 20px;
+
+      .item {
+        background-color: themed('bg');
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, .09);
+        padding: 20px;
+        margin: 0 0 20px 0;
+
+        span {
+          color: themed('txtColorSoft') ;
+        }
+
+        .userBlock {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 20px 0;
+
+          .userInfo {
+            position: relative;
+
+            span {
+              font-weight: 500;
+              color: themed('txtColor') ;
+            }
+          }
+
+          .userButtons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            button {
+              border: 0;
+              border-radius: 5px;
+              color: white;
+              cursor: pointer;
+              padding: 5px;
+
+              &:first-child {
+                background-color: rgb(103, 103, 225);
+              }
+
+              &:last-child {
+                background-color: rgb(235, 98, 98);
+              }
+            }
+
+
+          }
+
+          .userDetails {
+            display: flex;
+            gap: 10px;
+            color: themed('txtColorSoft') ;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
