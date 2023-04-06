@@ -6,7 +6,7 @@ import RightBar from '../rightBar/RightBar';
 import { DarkModeContext } from '../../context/darkModeContext';
 
 const Layout = () => {
-  const {darkMode} = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeContext);
   console.log(darkMode);
   return (
     <div className={`theme-${darkMode ? 'dark' : 'light'}`}>

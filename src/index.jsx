@@ -4,9 +4,9 @@ import { RouterProvider } from 'react-router-dom';
 import App from './App';
 import './index.scss';
 
-import router from './tools/routes';
-import { DarkModeContext, DarkModeProvider } from './context/darkModeContext';
 import { AuthProvider } from './context/authContext';
+import { DarkModeProvider } from './context/darkModeContext';
+import router from './tools/routes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

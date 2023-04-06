@@ -1,9 +1,9 @@
 import React from 'react';
-import './user.scss';
+import styles from './user.module.scss';
 
 const User = ({isOnline}) => {
   return (
-    <div className='user'>
+    <div className={styles.user}>
       {isOnline && <div className='online' />}
       <img
         src='https://images4.alphacoders.com/101/thumbbig-1012591.webp'

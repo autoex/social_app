@@ -36,3 +36,18 @@ $themes: (
   @function themed($key) {
     @return map-get($theme-map, $key);
   }
+
+
+  @mixin mobile480 {
+    @media (max-width:480px) {
+      @content;
+      
+    }
+  }
+
+  @mixin mobile880 {
+    @media (max-width:880px) {
+      @content;
+      
+    }
+  }

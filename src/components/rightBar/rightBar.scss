@@ -9,15 +9,21 @@
     height: calc(100vh - 50px);
     overflow: scroll;
     background-color: themed('bgSoft');
-    
+
+
 
     &::-webkit-scrollbar {
       display: none;
     }
 
-    .container {
-      padding: 20px;
+    @include mobile480 {
+      display: none;
+    }
+    @include mobile880 {
+      display: none;
+    }
 
+    .container {
       .item {
         background-color: themed('bg');
         box-shadow: 0 0 15px 1px rgba(0, 0, 0, .09);
@@ -25,7 +31,7 @@
         margin: 0 0 20px 0;
 
         span {
-          color: themed('txtColorSoft') ;
+          color: themed('txtColorSoft');
         }
 
         .userBlock {
@@ -39,7 +45,7 @@
 
             span {
               font-weight: 500;
-              color: themed('txtColor') ;
+              color: themed('txtColor');
             }
           }
 
@@ -70,7 +76,7 @@
           .userDetails {
             display: flex;
             gap: 10px;
-            color: themed('txtColorSoft') ;
+            color: themed('txtColorSoft');
             font-size: 12px;
           }
         }

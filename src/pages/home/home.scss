@@ -2,6 +2,10 @@
 
 
 .home {
+    padding: 20px;
+    @include mobile480 {
+        padding: 10px;
+    }
     @include themify($themes) { 
 
     }}

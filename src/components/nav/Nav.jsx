@@ -13,7 +13,7 @@ import User from '../user/User';
 import { DarkModeContext } from '../../context/darkModeContext';
 
 const Nav = () => {
-  const {darkMode, themeToggle} = useContext(DarkModeContext)
+  const { darkMode, themeToggle } = useContext(DarkModeContext);
   return (
     <nav>
       <div className='nav__left'>
@@ -21,7 +21,11 @@ const Nav = () => {
           <span className='logo'>Social</span>
         </Link>
         <HomeOutlinedIcon />
-        {darkMode? <LightModeOutlinedIcon onClick={themeToggle} /> : <DarkModeOutlinedIcon onClick={themeToggle} />}
+        {darkMode ? (
+          <LightModeOutlinedIcon onClick={themeToggle} />
+        ) : (
+          <DarkModeOutlinedIcon onClick={themeToggle} />
+        )}
         <AppsOutlinedIcon />
         <div className='search'>
           <SearchOutlinedIcon />
